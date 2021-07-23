@@ -1,0 +1,134 @@
+
+#main
+{
+	width:1100px;
+	height:auto;
+	margin:0 auto;
+}
+
+#wrapper
+{
+	width:1100px;
+	height:auto;
+	float:left;
+	box-shadow:0px 0px 20px #333;
+}
+
+#banner
+{
+	width:1100px;
+	height:150px;
+	float:left;
+	background-color:#369;
+	background-image:url("../images/banner.jpg")
+}
+
+#banner h2,h3
+{
+	font-family:verdana;
+	color:#fff;
+	margin-left:650px;
+	margin-top:30px;
+
+}
+
+#menu
+{
+	width:1100;
+	height:40px;
+	float:left;
+}
+#menu p
+{
+    float:left;
+    text-align:center;
+    margin-left:10px;
+	text-decoration:none
+}
+#middle
+{
+	width:1100px;
+	min-height:400px;
+	float:left;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+#middle #content
+{
+	width:783px;
+	min-height:400px;
+	float:left;
+	border:1px solid #097;
+	margin-left:10px;
+
+}
+#middle #content name
+{}
+
+#middle #ad
+{
+	width:283px;
+	min-height:400px;
+	float:right;
+	border:1px solid #f60;
+	margin-right:10px;
+}
+
+#bottom
+{
+	width:1101px;
+	height:70px;
+	float:left;
+	background-color:#777;
+	background-image:url("../images/bottom.jpg")
+}
+
+#bottom p
+{
+	text-align:center;
+	font-family:"Courier New", Courier, monospace; 
+	color:#black;
+}
+
+#bottom a
+{
+	text-align:center;
+	font-family:Arial; 
+	color:#black;
+	margin-right:25px;
+	text-decoration:none;
+}
+#bottom a:hover
+{
+	color:#cff;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  background-color: lightgray;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: blue;
+ font-size:20px;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.active{
+background-color: gray;
+color: white;
+}
+li a:hover {
+  background-color: orange;
+  color: white;
+}
+

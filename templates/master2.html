@@ -1,0 +1,53 @@
+<link
+    href="../static/css/general2.css"
+    rel="stylesheet"
+    type="text/css"/>
+
+
+
+<body>
+		<div id="main">
+        <div id="wrapper">
+        	<div id="banner">
+
+        	</div><!--end of banner-->
+        	<div id="menu">
+                <ul class="nav">
+                    <li><a href="medicalhome">Home</a></li>
+                    <li><a href="medical_profile">Profile</a></li>
+                    <li><a href="add_medicine">Add Medicine</a></li>
+                    <li><a href="show_medicines">Show Medicines</a></li>
+                    <li><a href="logout">Logout</a></li>
+                </ul>
+
+			</div><!--end of menu-->
+        	<div id="middle">
+        	<div id="content">
+				{% block content2 %}
+				{% endblock %}
+
+			</div>
+        	<div id="ad">
+				<img src="../static/images/ad2.gif" width="283" height="400"/>
+
+			</div>
+        	</div><!-- end of middle -->
+
+        	<div id="bottom">
+        		<p>
+            		<a href="#">HOME</a>
+                	<a href="#">CONTACT</a>
+                	<a href="#">POLICIES</a>
+                	<a href="#">TERM</a>
+
+             	</p>
+
+             	<p>
+             copyright &copy; 2021, All Right Reserved VGT Software Private Limited India.
+             	</p>
+        	</div><!--end of bottom-->
+        </div><!--end of wrapper-->
+        </div><!--end of main -->
+
+
+</body>

@@ -1,0 +1,33 @@
+{% extends "master1.html" %}
+{% block content1 %}
+<h1 style="color:red">MEDICAL DATA </h1>
+{% if data  %}
+        <p>{{data}}</p>
+        {% for d in data  %}
+            <h3>{{d[0]}}</h3>
+            <p>
+            lno: {{d[1]}}<br>
+            owner: {{d[2]}}<br>
+            Adress: {{d[3]}}<br>
+            Contact: {{d[4]}}<br>
+            Email: {{d[5]}}<br>
+
+            </p>
+            <form method="post" action="edit_medicals">
+            <input type="hidden" name="H1" value="{{d[5]}}" />
+            <input type="submit" name="B1" value="Edit" />
+        </form>
+
+        <form method="post" action="delete_medicals">
+            <input type="hidden" name="H1" value="{{d[5]}}" />
+            <input type="submit" name="B1" value="Delete" />
+        </form>
+
+        {% endfor %}
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}
+
+

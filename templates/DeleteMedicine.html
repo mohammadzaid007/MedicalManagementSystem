@@ -1,0 +1,18 @@
+<h1>Delete Medicine Data</h1>
+{% if data %}
+    <h3>name : {{data[1]}}</h3>
+    <p>med_id : {{data[0]}}</p>
+    <p>company :{{data[2]}}</p>
+    <p>lno :{{data[3]}}</p>
+    <p>med_type :{{data[4]}}</p>
+    <p>unit_price : {{data[5]}}</p>
+    <p>details : {{data[6]}}</p>
+    <p>medical_email : {{data[7]}}</p>
+    <form method="post" action="delete_medicine1">
+            <input type="hidden" name="H1" value="{{data[0]}}"/>
+            <input type="submit" name="B1" value="Delete" />
+    </form>
+
+{%elif msg %}
+    <h3>{{msg}}</h3>
+{%endif%}

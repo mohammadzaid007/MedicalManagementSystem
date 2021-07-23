@@ -1,0 +1,17 @@
+{% extends "master2.html" %}
+{% block content2 %}
+<h1>New Medicine</h1>
+<form method="post" action="add_medicine">
+    <p>Name <input type="text" name="T1" /> </p>
+    <p>Company <input type="text" name="T2" /> </p>
+    <p>Lno <input type="text" name="T3" /> </p>
+    <p>Med_type <input type="text" name="T4" /> </p>
+    <p>Unit_price <input type="text" name="T5" /> </p>
+    <p>Details <input type="text" name="T6" /> </p>
+    <p><input type="submit" name="B1" value="Add" /> </p>
+</form>
+{% if kota %}
+    <h3>{{kota}}</h3>
+{% endif %}
+
+{% endblock %}

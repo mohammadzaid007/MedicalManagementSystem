@@ -1,0 +1,67 @@
+{% extends "master2.html" %}
+{% block content2 %}
+<h1>Medicine Data</h1>
+<p><a href="add_medicine">Add Medicine </a></p>
+{% if data %}
+
+    {{data}}
+
+    <table border="1" style="border-collapse: collapse;">
+    {% for d in data %}
+        <tr>
+            <td>
+                <h3>Name : {{d[1]}}</h3>
+                <p>
+                    Med_id :  {{d[0]}} <br/>
+                    Company : {{d[2]}} <br/>
+                    Lno : {{d[3]}} <br/>
+                    Med_type : {{d[4]}} <br/>
+                    Unit_price : {{d[5]}} <br/>
+                    Details : {{d[6]}} <br/>
+                    Medical_email : {{d[7]}} <br/>
+                </p>
+            </td>
+            <td>
+                {% if d[8]=='no' %}
+
+                    <form action="upload_medicine_photo" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="H1" value="{{d[0]}}" />
+                        <p>
+                            Medicine Phot<input type="file" name="F1" /></p>
+                            <p><input type="submit" name="B1" value="Upload" />
+                        </p>
+                    </form>
+
+                {% else %}
+                    <img src="../static/medicine_photos/{{ d[8] }}" width="100" height="100" />
+                    <br/>
+                    <p><a href="#">Change Photo</a> </p>
+                {% endif %}
+
+            </td>
+            <td>
+                <form method="post" action="edit_medicine">
+                    <input type="hidden" name="H1" value="{{d[0]}}" />
+                    <input type="submit" name="B1" value="Edit" />
+                </form>
+
+                <form method="post" action="delete_medicine">
+                    <input type="hidden" name="H1" value="{{d[0]}}" />
+                    <input type="submit" name="B1" value="Delete" />
+                </form>
+            </td>
+        </tr>
+
+
+
+
+
+    {% endfor %}
+
+        </table>
+
+
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+{% endblock %}

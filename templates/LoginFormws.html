@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+{% block content %}
+<link
+    		href="../static/css/form.css"
+            rel="stylesheet"
+            type="text/css"/>
+ <center><h1 id="kota" style="color:RED" >login</h1></center>
+         <form id="F1" method="post" action="">
+         <p>Email<input type ="text" name="T1" id="txt1"/></p>
+         <p>Password <input type ="password" name="T2"id="txt2"/></p>
+         <p><input type="submit" name="B1" value="login" id="btn1"/></p>
+         </form>
+{% if msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}

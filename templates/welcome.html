@@ -1,0 +1,40 @@
+{% extends "master.html" %}
+{% block content %}
+<h1>Find Medicine</h1>
+
+<form method="post" action="/">
+    <p>
+        Medicine Name <input type="text" name="T1" />
+        <input type="submit" name="B1" value="Find" />
+    </p>
+</form>
+
+{% if data %}
+
+    <table border="0" cellpadding="10" cellspacing="10">
+    {% for d in data %}
+        <tr>
+            <td>
+                {% if d[6]!='no' %}
+                    <img src="../static/medicine_photos/{{ d[6] }}" width="50" height="50" />
+
+                {% endif %}
+            </td>
+            <td>
+                Medicine : {{d[0]}}<br/>
+                Company : {{d[1]}} <br/>
+                Price : {{d[2]}}
+            </td>
+            <td>
+                Store : {{d[3]}} <br/>
+                Address : {{d[4]}} <Br/>
+                Contact : {{d[5]}}
+            </td>
+        </tr>
+    {% endfor %}
+        </table>
+{% elif msg %}
+<h3>{{msg}}</h3>
+{% endif%}
+
+{% endblock %}

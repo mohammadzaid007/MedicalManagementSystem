@@ -1,0 +1,20 @@
+{% extends "master1.html" %}
+{% block content1 %}
+<h1>Delete Medical Data</h1>
+{% if data %}
+    <h3>name : {{data[0]}}</h3>
+    <p>lno : {{data[1]}}</p>
+    <p>owner :{{data[2]}}</p>
+    <p>address :{{data[3]}}</p>
+    <p>contact :{{data[4]}}</p>
+    <p>email : {{data[5]}}</p>
+    <form method="post" action="delete_medicals1">
+            <input type="hidden" name="H1" value="{{data[5]}}"/>
+            <input type="submit" name="B1" value="Delete" />
+    </form>
+
+{%elif msg %}
+    <h3>{{msg}}</h3>
+{%endif%}
+
+{% endblock %}

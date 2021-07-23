@@ -1,0 +1,45 @@
+
+
+		#F1
+		{
+
+			width:386px;
+			padding:5px;
+			margin-top:0px;
+			border-radius:0px 0px 10px 10px;
+			margin-left:170px;
+		}
+
+		#btn1
+		{
+			background-color:#039;
+			color:#fff;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:24px;
+			width:200px;
+			text-align:center;
+			padding:5px;
+			border-radius:30px;
+			border:none;
+			cursor:pointer;
+		}
+
+		#btn1:hover
+		{
+			background-color:#066;
+		}
+
+		#txt1,#txt2
+		{
+			width:350px;
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:24px;
+			border-radius:20px;
+		}
+
+		#F1 p
+		{
+			font-family:arial;
+			font-size:24px;
+			color:#900;
+		}

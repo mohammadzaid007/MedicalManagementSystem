@@ -1,0 +1,17 @@
+{% extends "master1.html" %}
+{% block content1 %}
+{% if data %}
+    <form method="post" action="edit_medicals1">
+        <p>name <input  type="text" name="T1" value="{{data[0]}}"  /></p>
+        <p>lno <input type="text" name="T2" value="{{data[1]}}"  /></p>
+        <p>owner <input type="text" name="T3" value="{{data[2]}}"  /></p>
+        <p>address <input type="text" name="T4" value="{{data[3]}}"  /></p>
+        <p>contact <input type="text" name="T5" value="{{data[4]}}"  /></p>
+        <p>email <input readonly type="text" name="T6" value="{{data[5]}}"  /></p>
+        <p><input type="submit" name="B1" value="Save Changes" /> </p>
+    </form>
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}

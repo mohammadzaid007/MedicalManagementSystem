@@ -1,0 +1,24 @@
+{% extends "master.html" %}
+{% block content %}
+<h1 style="color:red">MEDICAL DATA </h1>
+{% if data  %}
+
+        {% for d in data  %}
+            <h3 id="name" style="color:red">{{d[0]}}</h3>
+            <p>
+            lno: {{d[1]}}<br>
+            owner: {{d[2]}}<br>
+            Adress: {{d[3]}}<br>
+            Contact: {{d[4]}}<br>
+            Email: {{d[5]}}
+            </p>
+
+
+        {% endfor %}
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}
+
+

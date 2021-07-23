@@ -1,0 +1,57 @@
+
+<html>
+
+<head>
+	<link
+    		href="../static/css/general.css"
+            rel="stylesheet"
+            type="text/css"/>
+</head>
+
+<body>
+		<div id="main">
+        <div id="wrapper">
+        	<div id="banner">
+
+				<center><h2>MEDICINE FINDER</h2></center>
+				<center><h3>Website: www.medfinder.com<h3></center>
+        	</div><!--end of banner-->
+        	<div id="menu">
+				<ul>
+					<li><a class="active" href="/">Home</a></li>
+					<li><a href="medicals">MEDICALS</a></li>
+					<li><a href="login">LOGIN</a></li>
+
+				</ul>
+
+			</div><!--end of menu-->
+        	<div id="middle">
+        	<div id="content">
+				{% block content %}
+				{% endblock %}
+
+			</div>
+        	<div id="ad">
+				<img src="../static/images/medicalad.gif" width="283" height="400"/>
+			</div>
+        	</div><!-- end of middle -->
+
+        	<div id="bottom">
+        		<p>
+            		<a href="#">ABOUT</a>
+                	<a href="#">CONTACT</a>
+                	<a href="#">POLICIES</a>SS
+                	<a href="#">TERM</a>
+             	</p>
+
+             	<p>
+             copyright &copy; 2021, All Right Reserved VGT Software Private Limited India.
+             	</p>
+        	</div><!--end of bottom-->
+        </div><!--end of wrapper-->
+        </div><!--end of main -->
+
+
+</body>
+</html>
+

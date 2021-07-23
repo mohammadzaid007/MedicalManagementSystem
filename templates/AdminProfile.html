@@ -1,0 +1,16 @@
+{% extends "master1.html" %}
+{% block content1 %}
+<h1>My Profile</h1>
+{% if kota %}
+    <h2>{{kota[0]}}</h2>
+    <h3>
+        Address : {{kota[1]}}<br/>
+        Contact : {{kota[2]}} <br/>
+        Email : {{kota[3]}} <br/>
+        <a href="admin_profile1">Edit</a>
+    </h3>
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}

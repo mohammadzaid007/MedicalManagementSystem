@@ -1,0 +1,22 @@
+{% extends "master1.html" %}
+{% block content1 %}
+<h1 style="color:red">ADMIN DATA </h1>
+{% if data  %}
+        <p>{{data}}</p>
+        {% for d in data  %}
+            <h3>{{d[0]}}</h3>
+            <p>
+            Adress: {{d[1]}}<br>
+            Contact: {{d[2]}}<br>
+            Email: {{d[3]}}<br>
+
+            </p>
+
+        {% endfor %}
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}
+
+
